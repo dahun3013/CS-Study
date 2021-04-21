@@ -1,2 +1,0 @@
-# laptop.project
-use laptop
