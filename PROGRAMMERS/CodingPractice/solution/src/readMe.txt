@@ -9,3 +9,5 @@
 20210511 resolved problem date 
 20210517 resolved SQL problem
 20210526 resolved SQL problem
+20210527 resolved SQL problem
+
