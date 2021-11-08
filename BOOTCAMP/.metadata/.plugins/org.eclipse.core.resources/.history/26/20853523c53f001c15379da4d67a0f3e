@@ -1,0 +1,133 @@
+package day5;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class HomeWork2 {
+	static int maxLine = 100;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Product> array = new ArrayList<>();
+		String option = "Y";
+		int count = 1;
+		printLine("-");
+		while(option.equals("Y")) {
+			print(count+" 번째 제품 정보를 입력해주세요.\n");
+			array.add(new Product());
+			print("제품을 추가 하시겠습니까?(Y/N): ");
+			option = sc.nextLine();
+			count++;
+		}
+		printLine("-");
+		
+		printLine("=");
+		print("\t\t\t하이마트 제품 코드별 보고서\n");
+		printLine("-");
+		print("제품코드\t\t생산원가\t\t입고량\t\t판매량\t재고량\t판매금액\t\t\t수입금액\n");
+		printLine("-");
+		for(Product p : array) {
+			printRole(p.getCode(),p.getValue(),p.getQuantity(),p.getsRate(),p.getStock(),p.getsPrice(),p.getIncome());
+		}
+		printLine("-");
+		
+		int value=0, quantity=0,sRate=0,stock=0,sPrice=0,income=0;
+		int size = array.size();
+		for(Product p : array) {
+			value += p.getValue();
+			quantity += p.getQuantity();
+			sRate += p.getsRate();
+			stock += p.getStock();
+			sPrice += p.getsPrice();
+			income += p.getIncome();
+		}
+		printRole("합계",value,quantity,sRate,stock,sPrice,income);
+		
+		value/=size;
+		quantity/=size;
+		sRate/=size;
+		stock/=size;
+		sPrice/=size;
+		income/=size;
+		
+		printRole("평균",value,quantity,sRate,stock,sPrice,income);
+		
+		int index = -1;
+		int maxPrice = array.get(0).getsPrice();
+		for(int i=0; i<size; i++) {
+			if(maxPrice<array.get(i).getsPrice())
+				index = i;
+		}
+		
+		if(index== -1)
+			index = 0;
+		printRole("최대값",array.get(index).getValue(),array.get(index).getQuantity(),array.get(index).getsRate(),array.get(index).getStock(),array.get(index).getsPrice(),array.get(index).getIncome());
+		printLine("=");
+	}
+	public static void printLine(String str) {
+		for(int i=0; i<maxLine; i++) {
+			System.out.print(str);
+		}
+		System.out.println();
+	}
+	public static void print(String str) {
+		System.out.print(str);
+	}
+	public static String printRole(String str, int value, int quantity, int sRate, int stock, int sPrice, int income) {
+		String temp = "";
+		String[] array = {str,Integer.toString(value),Integer.toString(quantity),Integer.toString(sRate),Integer.toString(stock),Integer.toString(sPrice),Integer.toString(income)};
+		for(int i=0; i<array.length; i++) {
+			temp += array[i]+"\t";
+			if(array[i].length()<8)
+				temp+="\t";
+		}
+		temp+="\n";
+		print(temp);
+		return temp;
+	}
+}
+
+class Product{
+	private String code;
+	private int value, quantity,sRate,stock,sPrice,income;
+	public Product() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("제품코드\t입력: ");
+		code = sc.nextLine();
+		System.out.print("생산원가\t입력: ");
+		value = sc.nextInt();
+		System.out.print("입고량\t입력: ");
+		quantity = sc.nextInt();
+		System.out.print("판매량\t입력: ");
+		sRate = sc.nextInt();
+		init();
+	}
+	public Product(String str) {
+	}
+	public void init() {
+		stock = quantity - sRate;
+		sPrice = (int)(value * 1.2) * sRate;
+		income = sPrice - (value * sRate);
+	}
+	public String getCode() {
+		return code;
+	}
+	public int getValue() {
+		return value;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public int getsRate() {
+		return sRate;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public int getsPrice() {
+		return sPrice;
+	}
+	public int getIncome() {
+		return income;
+	}
+}
