@@ -1,6 +1,6 @@
 import java.util.*;
 //땅따먹기
-class Solution {
+class Problem3 {
     int solution(int[][] land) {
         for(int i = 1 ; i < land.length ; i++) {
         	for(int j = 0 ; j < land[0].length ; j++) {

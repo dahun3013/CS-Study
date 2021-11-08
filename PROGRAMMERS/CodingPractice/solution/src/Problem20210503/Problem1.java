@@ -1,3 +1,5 @@
+package Problem20210503;
+
 import java.util.*;
 //쿼드압축 후 개수 세기
 class Solution {

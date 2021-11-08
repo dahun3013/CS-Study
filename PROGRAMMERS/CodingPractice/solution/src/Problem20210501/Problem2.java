@@ -1,3 +1,5 @@
+package Problem20210501;
+
 //3진법 뒤집기
 class Solution {
     public int solution(int n) {

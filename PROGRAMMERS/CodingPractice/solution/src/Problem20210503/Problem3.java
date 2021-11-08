@@ -1,6 +1,8 @@
+package Problem20210503;
+
 import java.util.*;
 //괄호 회전하기
-class Solution {
+class Problem3 {
     public int solution(String s) {
         int answer = 0;
         String new_s = s;

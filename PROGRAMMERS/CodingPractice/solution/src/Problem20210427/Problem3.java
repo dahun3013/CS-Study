@@ -1,5 +1,7 @@
+package Problem20210427;
+
 // 큰 수 만들기
-class Solution {
+class Problem3 {
     public String solution(String number, int k) {
         StringBuilder answer = new StringBuilder();
 

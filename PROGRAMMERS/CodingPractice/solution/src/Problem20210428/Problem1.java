@@ -1,7 +1,8 @@
+package Problem20210428;
+
 import java.util.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import javafx.util.*;
 
 class Solution {
     
@@ -16,10 +17,10 @@ class Solution {
             String responseTime = s.substring(0, index);
             String duration = s.substring(index+1, n-1);
             
-            Pair<Long, Long> p = getIncludedTime(responseTime, duration);
+            //Pair<Long, Long> p = getIncludedTime(responseTime, duration);
             
-            s_list.add(p.getKey());
-            e_list.add(p.getValue());
+            //s_list.add(p.getKey());
+            //e_list.add(p.getValue());
         }
         
         int n = s_list.size();
@@ -45,7 +46,7 @@ class Solution {
         return answer;
     }
     
-    public Pair<Long, Long> getIncludedTime(String responseTime, String duration) {
+    /*public Pair<Long, Long> getIncludedTime(String responseTime, String duration) {
         float d = Float.parseFloat(duration);
        
         ZonedDateTime zdt = LocalDateTime.parse(responseTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS" , Locale.US ))
@@ -57,5 +58,5 @@ class Solution {
         long long_start = (long_end-(long)(d*1000-1));
 
         return new Pair<>(long_start, long_end);
-    }
+    }*/
 }

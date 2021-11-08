@@ -1,6 +1,8 @@
+package Problem20210513;
+
 import java.util.*;
 //단체사진 찍기
-class Solution {
+class Problem3 {
   
     static char[] character = {'A', 'C', 'F', 'J', 'M', 'N', 'R', 'T'};
     static char[] position;

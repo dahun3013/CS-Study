@@ -1,3 +1,5 @@
+package Problem20210427;
+
 import java.util.LinkedList;
 import java.util.Queue;
 // 다리를 지나는 트럭

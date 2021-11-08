@@ -1,5 +1,6 @@
 // 괄호 변환
-class Solution {
+package Problem20210427;
+public class Problem2 {
     public String solution(String p) {
         String answer = "";
         answer = convert(p);

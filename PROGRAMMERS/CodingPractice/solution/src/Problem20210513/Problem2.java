@@ -1,6 +1,8 @@
+package Problem20210513;
+
 import java.util.*;
 //오픈채팅방
-class Solution {
+class Problem2 {
     public String[] solution(String[] record) {
         ArrayList<String> chatLog = new ArrayList<>();
         HashMap<String, String> nickMap = new HashMap<>();

@@ -1,6 +1,6 @@
 import java.util.*;
 //완주하지 못한 선수
-class Solution {
+class Problem2 {
     public String solution(String[] participant, String[] completion) {
         
         int i;

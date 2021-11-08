@@ -1,6 +1,8 @@
+package Problem20210503;
+
 import java.util.*;
 //이진 변환 반복하기
-class Solution {
+class Problem2 {
     public int[] solution(String s) {
         int[] answer = {};
         int zero=0, cnt=0;
