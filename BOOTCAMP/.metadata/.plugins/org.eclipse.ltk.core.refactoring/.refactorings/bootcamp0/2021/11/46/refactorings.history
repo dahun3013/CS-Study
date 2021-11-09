@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;day6.Parent&apos; to &apos;ParentEX&apos;&#x0D;&#x0A;- Original project: &apos;bootcamp0&apos;&#x0D;&#x0A;- Original element: &apos;day6.Parent&apos;&#x0D;&#x0A;- Renamed element: &apos;day6.ParentEX&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Parent&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;day6{Parent.java[Parent" matchStrategy="1" name="ParentEX" qualified="false" references="true" similarDeclarations="false" stamp="1636331254105" textual="false" version="1.0"/>
+</session>

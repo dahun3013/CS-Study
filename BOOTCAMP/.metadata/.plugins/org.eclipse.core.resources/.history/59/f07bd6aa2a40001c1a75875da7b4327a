@@ -1,0 +1,17 @@
+package day6;
+
+public class ParentEX {
+
+}
+
+class Parent{
+	String name;
+	int age;
+	Parent(){
+		
+	}
+	void method1() {
+		System.out.println(name);
+		System.out.println(age);
+	}
+}
