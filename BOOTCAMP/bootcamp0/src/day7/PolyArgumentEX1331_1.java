@@ -55,19 +55,17 @@ class ObjectPrint{
 		mount=sc.nextInt();
 		
 		Product_Object po;
-		if(product.equals("컴퓨터"))
-			map.put(address,(po=new Computer_Object(address, mount)));
-		else if(product.equals("프린터"))
-			map.put(address,new Printer_Object(address, mount));
+		if(product.equals("컴퓨터")) {
+			
+		}
+			//map.put(address,(po=new Computer_Object(address, mount)));
+		else if(product.equals("프린터")) {
+			
+		}
+			//map.put(address,new Printer_Object(address, mount));
 	}
 	public void output() {
-		for(Product_Object p :array) {
-			if(address.equals(p.getAddress())){
-				p.getPrice()
-			}
 				
-			System.out.println();
-		}
 	}
 }
 public class PolyArgumentEX1331_1 {

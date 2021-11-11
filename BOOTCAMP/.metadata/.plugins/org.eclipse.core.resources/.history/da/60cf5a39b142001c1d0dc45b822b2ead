@@ -1,0 +1,23 @@
+package day8;
+
+public class InnerEX4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+abstract class A{
+	abstract int aM();
+}
+class AA extends A{
+
+	@Override
+	int aM() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
