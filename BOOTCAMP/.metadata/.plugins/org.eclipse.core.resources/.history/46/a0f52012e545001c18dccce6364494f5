@@ -1,0 +1,19 @@
+package day11;
+
+public class ThreadEX2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ThreadEX2_1 t2 = new ThreadEX2_1();
+		t2.start();
+	}
+
+}
+
+class ThreadEX2_1 extends Thread{
+	public void run() {
+		for(int i=10; i>0;i--) {
+			System.out.println(i);
+		}
+	}
+}

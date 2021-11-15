@@ -1,0 +1,109 @@
+package day10;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Vector;
+
+/*
+ * 메뉴 선택 0 내용 추가, 1 검색, 2 삭제, 3 종료
+ * 1.언어 선택(한국어, 영어)
+ * 
+ * 
+ */
+public class HomeWork {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AddressBook ab = new AddressBookKR();
+		ab.addRecord();
+		ab.getRecord();
+	}
+
+}
+
+class Record{
+	private String name;
+	private String phoneNumber;
+	private String address;
+	
+	public Record() {
+		name ="";
+		phoneNumber ="";
+		address = "";
+	}
+	
+	public Record(String name, String phoneNumber, String address) {
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+	}
+	public String getName() {
+		return name;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+	@Override
+	public String toString() {
+		return "이름: "+name+"\t 전화번호: "+phoneNumber+"\t 주소: "+address;
+	}
+}
+abstract class AddressBook{
+	protected Vector<Record> vecRs;
+	protected DataInputStream dis;
+	public AddressBook(){
+		vecRs = new Vector<Record>();
+	}
+	public void addRecord(){
+		try {
+			dis = new DataInputStream(System.in);
+			Record temp;
+			String name, phoneNumber, address;
+			name=dis.readLine();
+			phoneNumber=dis.readLine();
+			address=dis.readLine();
+			temp = new Record(name,phoneNumber,address);
+			vecRs.add(temp);
+			//dis.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void getRecord(){
+		try {
+			Record temp = null;
+			dis = new DataInputStream(System.in);
+			String name = dis.readLine();
+			dis.close();
+			for(int i=0; i<vecRs.size(); i++) {
+				if(vecRs.get(i).getName().equals(name))
+					temp = vecRs.get(i);
+			}
+			if(temp!=null) {
+				System.out.println(temp);
+			}
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	public void delRecord() {
+		
+	}
+	public abstract void displayMenu();
+}
+
+class AddressBookKR extends AddressBook{
+	
+	@Override
+	public void displayMenu() {
+		// TODO Auto-generated method stub
+		System.out.println("한국어 선택");
+	}
+}
