@@ -1,0 +1,40 @@
+package day12;
+
+import java.util.ArrayList;
+
+class Customer implements Runnable {
+	private Table table;
+	private String food;
+
+	Customer(Table table, String food) {
+		this.table = table;  
+		this.food  = food;
+	}
+
+	public void run() {
+		while(true) {
+			try { Thread.sleep(10);} catch(InterruptedException e) {}
+			String name = Thread.currentThread().getName();
+			
+			if(eatFood())
+				System.out.println(name + " ate a " + food);
+			else 
+				System.out.println(name + " failed to eat. :(");
+		} // while
+	}
+
+	boolean eatFood() { return table.remove(food); }
+}
+
+class ThreadWaitEx2 {
+	public static void main(String[] args) throws Exception {
+		Table table = new Table(); // 여러 쓰레드가 공유하는 객체
+
+		new Thread(new Cook(table), "COOK1").start();
+		new Thread(new Customer(table, "donut"),  "CUST1").start();
+		new Thread(new Customer(table, "burger"), "CUST2").start();
+	
+		Thread.sleep(5000);
+		System.exit(0);
+	}
+}

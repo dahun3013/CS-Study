@@ -1,0 +1,25 @@
+package day12;
+
+public class ThreadYieldEX {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class ThreadY1 extends Thread{
+	public boolean stop = false;
+	public boolean work = true;
+	public void run() {
+		while(!stop) {
+			if(work) {
+				System.out.println("Thread 작업중...");
+			}else {
+				Thread.yield();
+			}
+		}
+		System.out.println("스레드 종료");
+	}
+}
