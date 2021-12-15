@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = [{
+            name : '자바스크립트',
+            price : 10000,
+            publisher : '한빛'
+        },
+        {
+            name : '자바',
+            price : 20000,
+            publisher : '길벗'
+        }]
+        console.log(JSON.stringify(data));
+        console.log(JSON.stringify(data,null,2));
+
+        const json = JSON.stringify(data);
+        console.log(JSON.parse(json));
+        const jsData = JSON.parse(json);
+        console.log(typeof jsData);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //글자 조작하기  
+     
+       document.addEventListener('DOMContentLoaded', ()=>{
+           
+           //div 태그를 이용하여 스타일 적용하기 
+           const divs = document.querySelectorAll('body > div');
+           divs.forEach( (div, index ) => {
+                console.log(div, index);
+                const val=index * 10;
+                div.style.height = '10px';
+                div.style.backgroundColor = `rgba( ${val}, ${val}, ${val})`;
+
+            } );//end forEach
+       }); //end addEventListener
+    </script>
+</head>
+<body>
+    <!-- 25개 -->
+    <div></div> <div></div> <div></div> <div></div> <div></div> 
+    <div></div> <div></div> <div></div> <div></div> <div></div> 
+    <div></div> <div></div> <div></div> <div></div> <div></div> 
+    <div></div> <div></div> <div></div> <div></div> <div></div> 
+    <div></div> <div></div> <div></div> <div></div> <div></div> 
+</body>
+</html>

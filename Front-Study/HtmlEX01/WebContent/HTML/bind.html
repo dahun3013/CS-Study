@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        function say(greetings, honorifics){
+            console.log(greetings+" "+honorifics + this.name);
+        }
+        var tom = {name:"Tom Sawyer"};
+        var bercky = {name:"Tecky Thatcher"};
+        say.apply(tom,['Hello','Mr.']);
+        say.apply(bercky,["안녕!","아이 "]);
+        say.call(tom,"1번","2번");
+        say.call(bercky,"1번","2번");
+
+        var sayToTom = say.bind(tom);
+        sayToTom("Hello!!!","Mr.~~ ");
+
+    </Script>
+</head>
+<body>
+    
+</body>
+</html>
