@@ -86,6 +86,9 @@
 		<item value="189" key="DIALOG_X_ORIGIN"/>
 		<item value="-70" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="7" key="index"/>
+	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="NewPackageWizardPage">
