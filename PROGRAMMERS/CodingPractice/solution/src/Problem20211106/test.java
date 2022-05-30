@@ -3,6 +3,7 @@ package Problem20211106;
 #include <bits/stdc++.h>
         using namespace std;
 
+//가능 시간
 //금요일 9:30 ~ 18:00
 //월요일 13:00 ~ 18:00
 
