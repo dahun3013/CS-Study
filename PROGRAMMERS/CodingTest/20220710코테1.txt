@@ -1,0 +1,79 @@
+1.
+각 과목에는 고유 가중치가 존재
+성적에는 성적 가중치가 존재
+최종 점수는 고유 * 성적
+모든 과목의 최종점수 - 일정 기준치를 리턴하라
+
+
+2*10
+5*4
+10*0
+3*5
+
+20
+20
+0
+15
+55
+
+2.
+클래스로 인덱스와 점수를 묶고
+우선순위 큐로 정렬하여 해결
+
+
+3.
+mutual friend 는 건너친구를 뜻함
+건너친구가 많은 사람을 친구 추천한다.
+이미 친구인 관계는 추천하지 않는다.
+
+
+david -> frank
+demi -> david -> james
+frank -> james
+claire -> frank
+
+1. 이미 친구인 목록을 가져와서 사전 차단해야함
+2. 리스트 중에 user_id 다음 링크를 계산
+
+--david -> frank
+demi -> david -> james
+--frank -> james
+claire -> frank
+
+david -> frank -> demi
+
+frank -> david -> james -> clarie
+demi -> david -> james
+
+james -> frank -> demi
+claire -> frank
+
+
+david -> demi
+--frank -> demi
+demi -> james
+
+david -> demi
+demi -> david -> frank -> james
+frank -> demi
+james -> demi ->
+
+9
+1 2 3 3
+1 3 4 1
+2 2 2 3
+3 3 3
+2 2 5
+
+
+8
+1
+2
+3
+
+
+5
+
+1
+5
+
