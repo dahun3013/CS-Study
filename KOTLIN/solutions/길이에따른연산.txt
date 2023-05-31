@@ -1,0 +1,24 @@
+class Solution {
+    fun solution(num_list: IntArray): Int {
+        var answer: Int = 0
+        val len: Int = num_list.size
+        if(len>10){
+            for(i in 1..len){
+                answer+=num_list[i-1]
+            }
+            return answer
+        }
+        answer+=1
+        for(i in 1..len){
+            answer*=num_list[i-1]
+        }
+        return answer
+    }
+}
+
+
+정답은 맞췃지만
+아래 링크를 참조하여 좀 더 코틀린 스러운 코드로 짤 수 있음
+https://readystory.tistory.com/200
+참고하여 재작성 해볼것
+
