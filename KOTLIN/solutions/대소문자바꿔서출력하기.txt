@@ -1,0 +1,16 @@
+fun main(args: Array<String>) {
+    val s1 = readLine()!!
+    var answer:String = ""
+    
+    for(i in 0 until s1.length){
+        answer += when{
+            s1[i].isUpperCase() -> s1[i].lowercase()
+            else -> s1[i].uppercase()
+        }   
+    }
+    println(answer)
+}
+
+.map 확장함수를 이용한 풀이 발견
+https://blackdroid.tistory.com/25
+.map으로 순회하며 it이 매개변수 명인듯 보임
