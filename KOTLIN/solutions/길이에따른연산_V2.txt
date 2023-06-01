@@ -1,0 +1,12 @@
+class Solution {
+    fun solution(num_list: IntArray): Int {
+        val len: Int = num_list.size
+        return when{
+            len >10 -> num_list.sum()
+            else -> num_list.fold(1){mul, num -> mul*num}
+        }
+    }
+}
+조금 더 코틀린스럽게 작성
+변경된 부분
+when, collection 함수 사용
