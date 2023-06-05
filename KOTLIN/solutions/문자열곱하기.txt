@@ -1,0 +1,8 @@
+class Solution {
+    fun solution(my_string: String, k: Int): String {
+        return my_string.repeat(k)
+    }
+}
+
+repeat 함수는 어떤 문자열을 주어진 횟수만큼 반복합니다.
+또는 어떤 함수를 주어진 횟수만큼 반복하게 되죠.
