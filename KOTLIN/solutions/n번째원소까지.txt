@@ -1,0 +1,13 @@
+class Solution {
+    fun solution(num_list: IntArray, n: Int): IntArray {
+        var answer: IntArray = IntArray(n)
+        var index: Int = 0
+        answer.forEach{
+               answer[index] = num_list[index++]
+        }
+        return answer
+    }
+}
+
+slice 배열을 자르는 함수가 있음
+코틀린스러운 코드 짜기

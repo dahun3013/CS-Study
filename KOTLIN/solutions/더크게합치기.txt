@@ -1,0 +1,8 @@
+import kotlin.math.*
+class Solution {
+    fun solution(a: Int, b: Int): Int {
+        return max("$a$b".toInt(),"$b$a".toInt())
+    }
+}
+
+"$변수" 를 잘 이용할 것
