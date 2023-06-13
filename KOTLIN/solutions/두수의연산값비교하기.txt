@@ -1,0 +1,9 @@
+class Solution {
+    fun solution(a: Int, b: Int): Int {
+        var answer: Int = when{
+            "$a$b".toInt() >= 2*a*b -> "$a$b".toInt()
+            else -> 2*a*b
+        }
+        return answer
+    }
+}
