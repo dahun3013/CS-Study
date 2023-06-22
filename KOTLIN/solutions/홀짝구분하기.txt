@@ -5,3 +5,5 @@ fun main(args: Array<String>) {
         else -> println("$a is even")
     }
 }
+
+코틀린의 조건문은 when으로 더 쉽게 표현 할 수 있다.
