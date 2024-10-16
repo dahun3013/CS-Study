@@ -251,4 +251,5 @@ XSS가 성공하귀 위한 3가지 조건
 정보를 암호화한다.
 httpOnly 옵션을 설정한다 (document.cookie를 이용해 쿠키에 직접 접근하는 것을 방지)
 Url encoding이나 문자열을 치환한다.
+![XSS 와 CSRF 비교](https://github.com/user-attachments/assets/9565dee9-d82f-4c84-8877-ebe126f30ef1)
 
