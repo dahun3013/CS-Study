@@ -1,3 +1,8 @@
+[X-Trace 개발환경]
+CentOs 7.6 64bit
+java 8버전
+postgresql-10.1 버전
+
 [담당 고객사]
 수원시청
 하나금융티아이
