@@ -1,6 +1,6 @@
 # Front_End 면접준비
 <br/><br/><br/>
-## JSP(JavaServer Pages)
+## 1.JSP(JavaServer Pages)
 HTML 코드에 JAVA 코드를 넣어 동적우베페이지를 생성하는 웹어플리케이션 도구이다.
 JSP가 실행되면 자바 서블릿(Servlet)으로 변환되고 클래스로 컴파일된 후 응답하게 된다. 이변환 과정에서 _jspService()메서드가 생성되는데, 변환된 코드의 위치는 스크립트 요소에 따라 메서드 내부 혹은 외부에 놓인다.
 웹 어플리케이션 서버에서 동작되며 필요한 기능을 수행하고 그렇게 생성된 데이터를  웹페이지와 함께 클라이언트로 응답한다.
@@ -26,13 +26,13 @@ include: 외부 파일을 현재 JSP 파일에 포함시키는 지시어(<%@ pag
 taglib: 표현 언어에서 사용할 자바 클래스나 JSTl을 선언하는 지시어
 
 
-## 이벤트 루프
+## 2.이벤트 루프
 CALL STACK -> WEB API -> QUEUE -> EVENTLOOP -> CALL STACK
 
 CALLBACK QUEUE의 종류로는 TASK QUEUE, MICROTASK QUEUE 가 있다.
 MICROTASTK QUEUE는 그 어떤 곳 보다 가장 먼저 우선으로 콜백이 처리되게 된다.
 
-## HTTPS란
+## 3.HTTPS란
 OSI7 계층         TCP/IP             
 1.Application       Application                    HTTP FTP SMTP
 2.Presentation     ""                                   DNS RIP SNMP
@@ -42,7 +42,7 @@ OSI7 계층         TCP/IP
 6.Data-Link          NetworkAccess
 7.Physical                                                    Ethernet TokenRing FramRelay ATM
 
-## TCP
+## 4.TCP
 인터넷상에서 데이터를 메세지의 형태로 보내기 위해 IP와 함께 사용하는 프로토콜
 애플리케이션에게 신뢰적이고 연결지향성 서비스를 제공한다.
 TCP와 IP는 함께 사용되며 IP는 배달을, TCP는 패킷의 추적 및 관리를 하게된다.
@@ -53,7 +53,7 @@ TCP와 IP는 함께 사용되며 IP는 배달을, TCP는 패킷의 추적 및 �
 UDP보다 속도가 느리다.
 전이중(Full-Duplex), 점대점(PointtoPoint)방식
 
-## UDP
+## 5.UDP
 데이터를 독립적인 관계를 지니는 패킷(데이터그램)으로 처리하는 프로토콜
 비연결형 프로토콜으로 할당되는 논리적인 경로가 없고 각각의 패킷이 다른 경로로 전송되며 이 각각의 패킷은 독립적인 관계를 지니게 된다.
 연결을 설정하고 해제하는 과정이 존재하지 않는다.
@@ -65,7 +65,7 @@ UDP헤더의 CheckSum 필드를 통해 최소한의 오류만 검출한다.
 신뢰성이 낮다
 TCP보다 속도가 빠르다
 
-## CheckSum
+## 6.CheckSum
 중복 검사의 한 형태로 송신된 자료의 무결성을 보호하는 단순한 방법이다.
 통신에서 CRC 즉 순환 중복 검사를 체크섬이라 한다.
 
@@ -80,7 +80,7 @@ TCP보다 속도가 빠르다
 단순 합계 체크섬에서 발생할 수 있는 오버플로우를 회피하기 위해 추가적인 조치를 취한것
 캐리 니블을 버리는 방식으로 최상위 4bit를 버리고 단순 합계 체크섬과 동일한 동작을 취한다.
 
-## CORS(Cross-Origin Resource Sharing)
+## 7.CORS(Cross-Origin Resource Sharing)
 보안정책 SOP(같은 출처만 리소스를 공유할 수 있다)을 지키기위한 정책이다.
 교차 출처 리소스 공유는 브라우저가 자신의 출처가 아닌 다른 어떤 출처(도메인, 스킴 혹 포트)로부터 자원을 로딩하는 것을 허용하도록 서버가 허가 해주는 HTTP 헤더 반 메커니즘 이다.
 브라우저 단에서 구현된 정책으로 브라우저를 통하지 않은 서버 간 통신에선 정상 작동한다.
@@ -122,7 +122,7 @@ omit 가 아닌 옵션을 사용하여 리소스 요청에  인증정보가 포�
 Acees-Control-Allow-Origin 는 *(와일드카드)를 사용할 수 없으며 명시적 URL이여야한다.
 Access-Control-Allow-Credentials: true 헤더 정보가 들어가야 한다.
 
-## XSS
+## 8.XSS
 클라이언트의 브라우저를 타켓
 웹사이트에서 의도치 않은 스크립트를 넣어서 실행시키는 기법
 
@@ -137,7 +137,7 @@ Access-Control-Allow-Credentials: true 헤더 정보가 들어가야 한다.
 httpOnly 옵션을 설정한다 (document.cookie를 이용해 쿠키에 직접 접근하는 것을 방지)
 Url encoding이나 문자열을 치환한다.
 
-## CSRF 
+## 9.CSRF 
 해당 사이트의 서버를 타켓
 사용자가 자신의 의지와는 무관하게 침입자가 의도한 행위를 서버에 요청하게 만드는 공격
 
